@@ -31,7 +31,7 @@ export class Scheduler {
 
   /** Creates or updates the BullMQ job scheduler for each definition. */
   async sync(
-    // biome-ignore lint/suspicious/noExplicitAny: heterogeneous schedules, erased like JobList
+    // oxlint-disable-next-line typescript/no-explicit-any -- heterogeneous schedules, erased like JobList
     schedules: readonly ScheduleDefinition<any>[],
   ): Promise<void> {
     for (const schedule of schedules) {
@@ -109,7 +109,7 @@ export class Scheduler {
    * due run when `overlap: 'skip'`.
    */
   fireJob(
-    // biome-ignore lint/suspicious/noExplicitAny: heterogeneous schedules, erased like JobList
+    // oxlint-disable-next-line typescript/no-explicit-any -- heterogeneous schedules, erased like JobList
     schedules: readonly ScheduleDefinition<any>[],
   ): JobDefinition<{ schedule: string }, null> {
     return {

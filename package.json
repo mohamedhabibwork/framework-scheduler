@@ -1,0 +1,26 @@
+{
+  "name": "@framework/scheduler",
+  "version": "0.2.0",
+  "description": "Cron schedule registry, distributed locking, and scheduled job/workflow runner.",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://github.com/mohamedhabibwork/framework-scheduler#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedhabibwork/framework.git",
+    "directory": "packages/scheduler"
+  },
+  "bugs": {
+    "url": "https://github.com/mohamedhabibwork/framework/issues"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@framework/core": "workspace:*",
+    "@framework/queue": "workspace:*",
+    "bullmq": "6.4.1",
+    "zod": "4.6.7"
+  }
+}
